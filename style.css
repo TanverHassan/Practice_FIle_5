@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.drop{
+    background-color: #e67e22;
+}
+.drop ul{
+    text-align: center;
+}
+.drop ul li{
+    display: inline-block;
+    margin-left: -4px;
+}
+.drop ul li:first-child a{
+    border-left: 1px solid #ddd;
+}
+.drop ul li a{
+    color: #ddd;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 20px;
+    display: inline-block;
+    border-right: 1px solid #ddd;
+}
+.drop ul li:hover > a{
+    background-color: #d35400;
+}
+/* Dropdown Menu */
+.drop ul li{
+    position: relative;
+}
+.drop ul li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 150px;
+    background-color: #e67e22;
+    border-top: 1px solid #ddd;
+    transition: .4s;
+}
+.drop ul li ul li{
+    display: block;
+    margin-left: 0;
+}
+.drop ul li ul li a{
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+/* Hover part */
+.drop ul li ul{
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+.drop ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
